@@ -75,3 +75,5 @@ public class DataBaseWork {
 	}
 
 }
+
+//Комит с ноута 28.01.2020
