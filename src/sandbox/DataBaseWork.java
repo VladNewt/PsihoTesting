@@ -49,25 +49,48 @@ public class DataBaseWork {
 		System.out.println("2 - Ввести данные в таблицу");
 		action = in.nextInt();
 		System.out.println(action);
+		in.nextLine();
 		//in.close();
 		
 		switch(action) {
 			case 1:
 				String nameTab;
 				int numCol;
-				System.out.print("Введите название таблицы:");
+				
+				System.out.print("Введите название таблицы: ");
 				nameTab = in.nextLine();
-				System.out.print("Введите число столбцов:");
+				//System.out.println(nameTab+"2");
+				System.out.print("Введите число столбцов: ");
 				numCol = in.nextInt();
+				//System.out.println("Число столбцов: "+numCol);
+				in.nextLine();
 				
 				String[] nameCol = new String[numCol+1];
 				for (int i = 0; i<numCol; i++) {
-					System.out.println("Введите имя "+(i+1)+" - го столбца.");
+					System.out.print("Введите имя "+(i+1)+"-го столбца: ");
 					nameCol[i]=in.nextLine();
-					System.out.println("Имя "+(i+1)+" - го столбца: " + nameCol[i]);
+					//System.out.println("Имя "+(i+1)+" - го столбца: " + nameCol[i]);
 					//in.close();
 				}
+				
+				//Ввод типа данных столбцов
+				System.out.println("Введите один из предложенных типа данных столбца:");
+				System.out.println("	INT(3)");
+				System.out.println("	CHAR(66)");
+				System.out.println("	DATE(66)");
+				
+				String[] dataType = new String[numCol+1];
+				for (int i = 0; i<numCol; i++) {
+					System.out.print("Введите тип данных "+(i+1)+"-го столбца: ");
+					dataType[i]=in.nextLine();
+					//System.out.println("Имя "+(i+1)+" - го столбца: " + nameCol[i]);
+					//in.close();
+				}
+				
+				
+				
 				in.close();
+				
 				
 		}
 		
@@ -76,4 +99,3 @@ public class DataBaseWork {
 
 }
 
-//Комит с ноута 28.01.2020
