@@ -55,19 +55,19 @@ public class DataBaseWork {
 			case 1:
 				String nameTab;
 				int numCol;
-				System.out.println("Введите название таблицы:");
+				System.out.print("Введите название таблицы:");
 				nameTab = in.nextLine();
-				//in.close();
-				System.out.println("Введите число столбцов:");
+				System.out.print("Введите число столбцов:");
 				numCol = in.nextInt();
-				//in.close();
+				
 				String[] nameCol = new String[numCol+1];
 				for (int i = 0; i<numCol; i++) {
 					System.out.println("Введите имя "+(i+1)+" - го столбца.");
 					nameCol[i]=in.nextLine();
+					System.out.println("Имя "+(i+1)+" - го столбца: " + nameCol[i]);
 					//in.close();
 				}
-				
+				in.close();
 				
 		}
 		
